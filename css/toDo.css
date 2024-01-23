@@ -8,27 +8,22 @@ main {
     width: 60%;
 }
 
-/* .todo.App.active {
+.todo.App.active {
     margin: 0 auto;
     max-height: 660px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateY(0);
-    transition: all 0.3s;
-} */
-.active {
-    margin: 0 auto;
-    max-height: 660px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: translateY(0);
-    transition: all 0.3s;
+    transform: translateY(15%);
+    transition: ease-in-out 0.5s;
 }
+
 .todo.App {
-    display: none;
-    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(200%);
+    transition: ease-in-out 0.5s;
 }
 
 .board {

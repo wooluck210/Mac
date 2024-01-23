@@ -5,4 +5,9 @@
 body {
     background-image: url(../assets/images/monterey.jpg);
     background-size: cover;
+    overflow: hidden;
+}
+
+header {
+    display: none;
 }

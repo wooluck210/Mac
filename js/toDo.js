@@ -1,36 +1,44 @@
-let toDo = document.querySelector('.todo.App')
-let toDoForm = toDo.querySelector('form')
-let toDoInput = toDo.querySelector('input')
-let toDoLists = toDo.querySelector('.todo ul')
-let doneList = toDo.querySelector('.done ul')
-let leftToDo = []
+let toDoApp = document.querySelector('.todo.App')
+let toDoForm = toDoApp.querySelector('form')
+let toDoInput = toDoApp.querySelector('input')
+let toDoLists = toDoApp.querySelector('.todo ul')
+let doneList = toDoApp.querySelector('.done ul')
 
-function enterToDo(event) {
+let TODOS_KEY = "todos"
+let toDos = []
+
+function savedToDos() {
+    localStorage.setItem(TODOS_KEY, JSON.stringify(toDos))
+}
+
+function handleToDoSubmit(event) {
     event.preventDefault();
-    let toDoValue = toDoInput.value;
+    let newToDo = toDoInput.value;
+    toDoInput.value = ''
+    toDos.push(newToDo)
+    enterToDo(newToDo)
+    savedToDos()
+}
 
-    if (toDoValue === "") {
+function enterToDo(newToDo) {
+    let li = document.createElement('li')
+    let span = document.createElement('span')
+    let btnDone = document.createElement('button')
+
+    if (newToDo === "") {
         alert("Please write to do")
         return
     }
 
-    let li = document.createElement('li')
-    let span = document.createElement('span')
-    let btnDone = document.createElement('button')
     li.appendChild(span)
-    span.innerText = toDoValue
+    span.innerText = newToDo
     btnDone.innerText = '✔️'
     // ✔️✅
     
     toDoLists.appendChild(li);
     li.appendChild(btnDone)
-    
-    leftToDo.push(li)
-
-    toDoInput.value = ''
 
     btnDone.addEventListener('click', moveToDone)
-    return leftToDo
 }
 
 function moveToDone(event) {
@@ -39,6 +47,10 @@ function moveToDone(event) {
     li.childNodes[1].innerText = '❌'
 }
 
-toDoForm.addEventListener('submit', enterToDo)
+toDoForm.addEventListener('submit', handleToDoSubmit)
 
-
+const savedToDos = localStorage.getItem(TODOS_KEY)
+if (savedToDos) {
+    const parsedToDos = JSON.parse(savedToDos)
+    parsedToDos.forEact(enterToDo)
+}
