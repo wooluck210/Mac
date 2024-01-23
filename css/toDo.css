@@ -1,0 +1,81 @@
+header {
+    font-size: 48px;
+    text-align: center;
+}
+
+main {
+    margin: auto;
+    width: 60%;
+}
+
+/* .todo.App.active {
+    margin: 0 auto;
+    max-height: 660px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(0);
+    transition: all 0.3s;
+} */
+.active {
+    margin: 0 auto;
+    max-height: 660px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(0);
+    transition: all 0.3s;
+}
+.todo.App {
+    display: none;
+    transition: all 0.3s;
+}
+
+.board {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.board article {
+    width: 33%;
+}
+
+h2 {
+    text-align: center;
+    margin: 10px;
+}
+
+.todo ul {
+    background-color: rgb(101, 211, 255);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.inpro ul {
+    background-color: rgb(242, 245, 157);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.done ul {
+    background-color: pink;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.board ul {
+    border: 1px solid black;
+    height: 400px;
+}
+
+.todo.App li {
+    border-bottom: 1px solid rgb(177, 177, 177);
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo.App li button {
+    background-color: transparent;
+    border-style: none;
+}
