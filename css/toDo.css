@@ -3,27 +3,28 @@ header {
     text-align: center;
 }
 
-main {
-    margin: auto;
-    width: 60%;
-}
-
 .todo.App.active {
     margin: 0 auto;
+    width: 50%;
     max-height: 660px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateY(15%);
     transition: ease-in-out 0.5s;
+    transform: translate(-50%, 15%);
+    position: absolute;
+    left: 50%;
 }
 
 .todo.App {
     display: flex;
+    width: 50%;
     flex-direction: column;
     align-items: center;
-    transform: translateY(200%);
     transition: ease-in-out 0.5s;
+    transform: translate(-50%, 400%);
+    position: absolute;
+    left: 50%;
 }
 
 .board {

@@ -1,6 +1,7 @@
 @import url(reset.css);
 @import url(toDo.css);
 @import url(footer.css);
+@import url(calculator.css);
 
 body {
     background-image: url(../assets/images/monterey.jpg);
@@ -10,4 +11,11 @@ body {
 
 header {
     display: none;
+}
+
+main {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    position: relative;
 }

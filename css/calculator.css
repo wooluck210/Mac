@@ -1,0 +1,43 @@
+.calculator.App.active {
+    transition: ease-in-out 0.5s;
+    transform: translate(-50%, 15%);
+    position: absolute;
+    left: 50%;
+}
+
+.calculator.App {
+    border: 1px solid #000;
+    padding: 10px;
+    max-width: 660px;
+    margin: 0 auto;
+    transition: ease-in-out 0.5s;
+    transform: translate(-50%, 400%);
+    position: absolute;
+    left: 50%;
+}
+
+#calculator-display {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.calculator-result {
+    font-size: 1.5em;
+    min-height: 50px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: right;
+    border-bottom: 1px solid #ccc;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.calculator-buttons button {
+    padding: 10px;
+    cursor: pointer;
+}
