@@ -10,37 +10,36 @@
     <body>
         <header>Mac for Window</header>
         <main>
-            <section class="calculator App">
-                <div class="calculator">
-                    <div id="calculator-result" class="calculator-result">0</div>
-                    <input type="text" id="calculator-display" />
-                    <div class="calculator-buttons">
-                        <!-- Buttons for calculator -->
-                        <button onclick="inputChar('(')">(</button>
-                        <button onclick="inputChar(')')">)</button>
-                        <button onclick="clearDisplay()">C</button>
-                        <button onclick="deleteLast()">DEL</button>
-                        <button onclick="inputChar('7')">7</button>
-                        <button onclick="inputChar('8')">8</button>
-                        <button onclick="inputChar('9')">9</button>
-                        <button onclick="inputChar('/')">/</button>
-                        <button onclick="inputChar('4')">4</button>
-                        <button onclick="inputChar('5')">5</button>
-                        <button onclick="inputChar('6')">6</button>
-                        <button onclick="inputChar('*')">*</button>
-                        <button onclick="inputChar('1')">1</button>
-                        <button onclick="inputChar('2')">2</button>
-                        <button onclick="inputChar('3')">3</button>
-                        <button onclick="inputChar('-')">-</button>
-                        <button onclick="inputChar('0')">0</button>
-                        <button onclick="inputChar('.')">.</button>
-                        <button onclick="toggleSign()">±</button>
-                        <button onclick="inputChar('+')">+</button>
-                        <button onclick="calculate()">=</button>
-                    </div>
+            <section class="calculator container">
+                <div class="calculator-screen">
+                    <input type="text" />
+                    <div class="calc-current">0</div>
+                </div>
+                <div class="calculator-buttons">
+                    <!-- Buttons for calculator -->
+                    <button class="calc-function">C</button>
+                    <button class="calc-function">(</button>
+                    <button class="calc-function">%</button>
+                    <button class="calc-operation">÷</button>
+                    <button class="calc-number">7</button>
+                    <button class="calc-number">8</button>
+                    <button class="calc-number">9</button>
+                    <button class="calc-operation">×</button>
+                    <button class="calc-number">4</button>
+                    <button class="calc-number">5</button>
+                    <button class="calc-number">6</button>
+                    <button class="calc-operation">-</button>
+                    <button class="calc-number">1</button>
+                    <button class="calc-number">2</button>
+                    <button class="calc-number">3</button>
+                    <button class="calc-operation">+</button>
+                    <button class="calc-function">+/-</button>
+                    <button class="calc-number">0</button>
+                    <button class="calc-function">.</button>
+                    <button class="calc-operation">=</button>
                 </div>
             </section>
-            <section class="todo App">
+            <section class="todo container">
                 <form>
                     <label for="">To Do: </label>
                     <input type="text" placeholder="Enter To Do" />
@@ -61,7 +60,7 @@
                     </article>
                 </div>
             </section>
-            <section class="weather App">weather App</section>
+            <section class="weather container">weather App</section>
         </main>
         <footer>
             <button class="apps calculator icon">Calculator App</button>
@@ -71,5 +70,6 @@
 
         <script src="./js/toDo.js"></script>
         <script src="./js/appIcon.js"></script>
+        <script src="./js/calculator.js"></script>
     </body>
 </html>

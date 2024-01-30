@@ -1,4 +1,4 @@
-const display = document.getElementById('calculator-display');
+const display = document.querySelector('.calculator-input');
 
 function inputChar(character) {
     display.value += character;
@@ -26,7 +26,7 @@ function toggleSign() {
     }
 }
 
-document.addEventListener('keydown', (event) => {
+display.addEventListener('keydown', (event) => {
     if ((event.key >= 0 && event.key <= 9) || ['+', '-', '*', '/', '(', ')', '.'].includes(event.key)) {
         inputChar(event.key);
     } else if (event.key === 'Enter') {

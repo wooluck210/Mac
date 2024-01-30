@@ -1,4 +1,4 @@
-const toDoApp = document.querySelector('.todo.App')
+const toDoApp = document.querySelector('.todo.container')
 const toDoForm = toDoApp.querySelector('form')
 const toDoInput = toDoApp.querySelector('input')
 const toDoLists = toDoApp.querySelector('.todo ul')

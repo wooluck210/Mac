@@ -3,7 +3,7 @@ header {
     text-align: center;
 }
 
-.todo.App.active {
+.todo.container.active {
     margin: 0 auto;
     width: 50%;
     max-height: 660px;
@@ -16,7 +16,7 @@ header {
     left: 50%;
 }
 
-.todo.App {
+.todo.container {
     display: flex;
     width: 50%;
     flex-direction: column;
@@ -65,13 +65,13 @@ h2 {
     height: 400px;
 }
 
-.todo.App li {
+.todo.container li {
     border-bottom: 1px solid rgb(177, 177, 177);
     display: flex;
     justify-content: space-between;
 }
 
-.todo.App li button {
+.todo.container li button {
     background-color: transparent;
     border-style: none;
 }
